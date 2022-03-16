@@ -1,0 +1,6 @@
+dependencies {
+    implementation project(':spring-boot-starter-stargazer')
+    implementation project(':stargazer-zookeeper')
+    implementation libraries.springBeans
+    implementation libraries.springBootStarterWeb
+}

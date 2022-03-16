@@ -1,0 +1,58 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.3.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+}
+
+ext {
+    springBootVersion = '2.3.3.RELEASE'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+apply from: 'dependency.gradle'
+
+
+allprojects {
+    group 'org.mym.incubator.stargazer'
+    version '0.0.1.0'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot'
+
+    repositories {
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+    [javadoc]*.options*.charSet = 'UTF-8'
+
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+
+    tasks.withType(JavaCompile) {
+        options.compilerArgs += ['-Xlint:unchecked', '-Xlint:deprecation']
+    }
+
+
+    dependencies {
+        implementation libraries.slf4j
+        implementation libraries.log4j
+        implementation libraries.log4jApi
+        implementation libraries.log4jCore
+        implementation libraries.log4jToSlf4j
+        implementation libraries.logback
+        implementation libraries.lombok
+        annotationProcessor libraries.lombok
+        testCompile libraries.test
+    }
+}

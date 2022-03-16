@@ -1,0 +1,15 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /stargazer-test
+    application-display-name: stargazer-test
+
+logging:
+  level:
+    org.mym.incubator.stargazer: debug
+  pattern:
+    console: "%clr(%d{${LOG_DATEFORMAT_PATTERN:yyyy-MM-dd HH:mm:ss.SSS}}){green} %clr(${LOG_LEVEL_PATTERN:%5p}) %clr(${PID:- }){magenta} %clr(--){green} %clr([%10.10t]){faint} %clr(%-40.40logger{39}){cyan} %clr(%line){yellow} %clr(:){red} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+stargazer:
+  url: zookeeper://localhost:29181
+  topic:
+    name: stargazer

@@ -1,0 +1,6 @@
+dependencies {
+    implementation project(':stargazer-common')
+    implementation project(':stargazer-spi')
+    implementation 'org.apache.curator:curator-framework:2.12.0'
+    implementation 'org.apache.curator:curator-recipes:2.12.0'
+}

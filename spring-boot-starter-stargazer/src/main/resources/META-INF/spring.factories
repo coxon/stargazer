@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.mym.incubator.stargazer.spring.starter.StargazerAutoConfiguration

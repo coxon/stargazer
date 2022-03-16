@@ -1,0 +1,4 @@
+dependencies {
+    implementation project(':stargazer-spi')
+    implementation project(':stargazer-common')
+}

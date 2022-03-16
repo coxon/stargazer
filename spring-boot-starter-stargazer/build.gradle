@@ -1,0 +1,11 @@
+archivesBaseName = 'spring-boot-starter-stargazer'
+
+configurations {
+}
+
+dependencies {
+    implementation project(':stargazer-spi')
+    implementation project(':stargazer-common')
+    implementation libraries.autoconfigure
+    annotationProcessor libraries.configurationProcessor
+}

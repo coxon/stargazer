@@ -1,0 +1,10 @@
+rootProject.name = 'stargazer'
+include 'stargazer-spi'
+include 'stargazer-common'
+include 'stargazer-zookeeper'
+include 'spring-boot-starter-stargazer'
+include 'stargazer-redis'
+include 'stargazer-test'
+include 'stargazer-rocketmq'
+include 'stargazer-security'
+
