@@ -13,11 +13,9 @@
 
 ## Introduction
 
-**Tardigrades** A Java-based tool library
+**Stargazer** A springboot-based starter for quickly integrating multiple types of distributed coordination middleware
 
 ## Module
-
-**Sweet Java**
 
 | module                        | description                 |
 |-------------------------------|-----------------------------|
